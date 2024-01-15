@@ -10,7 +10,6 @@ import {
   useColorModeValue,
   Stack,
   VisuallyHidden,
-  useColorMode,
   Container,
   Text,
 } from "@chakra-ui/react";
@@ -24,12 +23,10 @@ interface NavLinkProps {
 }
 import Image from "next/image";
 
-// Add Portfolio section later
 const Links = [
   { label: "Home", href: "/" },
   { label: 'Projects', href: '#projects' },
   { label: 'Photos', href: '#photos' },
-  /* { label: "Portfolio", href: " " },*/
   {
     label: "Resume",
     href: "https://blush-romola-69.tiiny.site/",
@@ -85,7 +82,6 @@ const NavLink = (props: NavLinkProps) => {
       rounded={"md"}
       _hover={{
         textDecoration: "none",
-        bg: useColorModeValue("gray.200", "gray.700"),
       }}
       href={href}
     >
@@ -98,12 +94,7 @@ const NavLink = (props: NavLinkProps) => {
 //
 export default function Simple() {
   const { isOpen, onOpen, onClose } = useDisclosure();
-  const { colorMode, toggleColorMode } = useColorMode();
 
-  const handleToggle = () => {
-    toggleColorMode(); // Call the toggleColorMode function
-    onClose(); // Close the menu if it's open (optional)
-  };
 
   return (
     <>
@@ -168,17 +159,6 @@ export default function Simple() {
               align={{ base: "center", md: "center" }}
             >
               <Stack direction={"row"} spacing={6}>
-                {/* Work on night mode button later */}
-               {/* <IconButton
-                  icon={colorMode === "light" ? <MoonIcon /> : <SunIcon />}
-                   onClick={handleToggle}
-                  aria-label={
-                    colorMode === "light"
-                      ? "Switch to dark mode"
-                      : "Switch to light mode"
-                  }
-                  variant="ghost"
-                /> */}
                 <SocialButton
                   label={"LinkedIn"}
                   href={"https://www.linkedin.com/in/esv261/"}

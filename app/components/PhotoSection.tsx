@@ -1,4 +1,3 @@
-"use client";
 import React from "react";
 import {
   Box,
@@ -12,49 +11,27 @@ import {
   VStack,
   SimpleGrid,
 } from "@chakra-ui/react";
-import Image from "next/image";
 
-//Input inforation to display in each photo card.
+interface Photo {
+  imageUrl: string;
+  heading: string;
+  text: React.ReactNode;
+}
+
+const PhotoData: Photo[] = [
+  {
+    imageUrl: "/assets/local-photos/castle.png",
+    heading: "The St. Louis Cathedral",
+    text: "New Orleans (2022)",
+  },
+  // Add more Photo objects as needed
+];
+
 export default function Photos() {
-  //ONLY UPLOAD PNG IMAGES
-  const PhotoData = [
-    {
-      imageUrl: "/assets/local-photos/castle.png",
-      heading: "The St. Louis Cathedral",
-      text: "New Orleans (2022)",
-    },
-    {
-      imageUrl: "/assets/local-photos/arc.png",
-      heading: "Santa Catalina Arch ",
-      text: "Antigua, Guatemala (2023)",
-    },
-    {
-      imageUrl: "/assets/local-photos/boston.png",
-      heading: "Boston",
-      text: "Massachusetts (2023)",
-    },
-    {
-      imageUrl: "/assets/local-photos/man.png",
-      heading: "Serene",
-      text: "Guatemala City (2023)",
-    },
-    {
-      imageUrl: "/assets/local-photos/lights.png",
-      heading: "Butterfree",
-      text: "Massachusetts (2022)",
-    },
-    {
-      imageUrl: "/assets/local-photos/street.png",
-      heading: "Vampire Diaries",
-      text: "New Orleans (2022)",
-    },
-  ];
-
   return (
     <div>
       <Center py={6}>
         <VStack spacing={4} align="stretch">
-          //Handles the photo text
           <Text
             fontFamily="Nunito Sans"
             fontSize={30}
@@ -63,7 +40,7 @@ export default function Photos() {
             color="black"
             mb={4}
           >
-            Photo Gallery 
+            Photo Gallery
           </Text>
           <SimpleGrid columns={[1, 2, 3]} spacing={4}>
             {PhotoData.map((card, index) => (
@@ -81,15 +58,14 @@ export default function Photos() {
   );
 }
 
-// This will edit the card
 function Card({
   imageUrl,
   heading,
-  text, // Updated type to React.ReactNode
+  text,
 }: {
   imageUrl: string;
   heading: string;
-  text: React.ReactNode; // Updated type to React.ReactNode
+  text: React.ReactNode;
 }) {
   return (
     <Box
@@ -104,7 +80,7 @@ function Card({
       borderColor="black"
       boxShadow={useColorModeValue("3px 6px 0 black", "3px 6px 0 cyan")}
       transition="transform 0.3s"
-      _hover={{ transform: "scale(1.05)" }} // Scale the card on hover
+      _hover={{ transform: "scale(1.05)" }}
     >
       <Box h={"320px"} borderBottom={"1px"} borderColor="black">
         <Img
@@ -116,8 +92,8 @@ function Card({
           alt={"Card Image"}
         />
       </Box>
-      <Box p={4}  display="flex" flexDirection="column" justifyContent="space-between" h="25%">
-        <Heading color={"black"} fontSize={"xl"} noOfLines={1} textAlign="center" >
+      <Box p={4} display="flex" flexDirection="column" justifyContent="space-between" h="25%">
+        <Heading color={"black"} fontSize={"xl"} noOfLines={1} textAlign="center">
           {heading}
         </Heading>
         <Text

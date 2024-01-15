@@ -57,13 +57,11 @@ const ProjectData: {
   },
 ];
 
-//used to Add or Remove prooject rows
 export default function Projects() {
   return (
     <div>
       <Center py={6}>
           <VStack spacing={4} align="stretch">
-            //Handles Project header
             <Text
             fontFamily="Nunito Sans"
             fontSize={30}
@@ -91,7 +89,6 @@ export default function Projects() {
   );
 }
 
-//This function edits the card UI
 function Card({
   imageUrl,
   heading,
@@ -116,7 +113,7 @@ function Card({
       borderColor="black"
       boxShadow={useColorModeValue("3px 6px 0 black", "3px 6px 0 cyan")}
       transition="transform 0.3s"
-      _hover={{ transform: "scale(1.05)" }} // Scale the card on hover
+      _hover={{ transform: "scale(1.05)" }} 
     >
       <Box h={"320px"} borderBottom={"1px"} borderColor="black">
         <a href={githubLink} target="_blank" rel="noopener noreferrer">
