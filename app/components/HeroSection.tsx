@@ -3,7 +3,6 @@ import {
   Stack,
   Heading,
   Text,
-  useBreakpointValue,
   Image,
 } from "@chakra-ui/react";
 
@@ -45,9 +44,9 @@ export default function HeroSection() {
             color={"black "}
             textAlign="center"
           >
-            I am Esvin Ruiz, a dedicated computer science student enrolled at
+            I am Esvin Ruiz, a dedicated computer science student  at
             Wilmington University. My fervor lies in cultivating opportunities
-            for underrepresented minorities and transforming innovative concepts
+            for underrepresented individulas and transforming innovative concepts
             into tangible reality.
           </Text>
         </Stack>

@@ -33,5 +33,4 @@ const GitHubContributions = () => {
     </>
   );
 };
-
 export default GitHubContributions;

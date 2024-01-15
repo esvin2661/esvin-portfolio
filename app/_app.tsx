@@ -18,7 +18,6 @@ function MyApp({ Component, pageProps }: AppProps) {
     <ChakraProvider>
       <Head>
         <title>Esvin RUiz</title>
-        {/* Add other head elements here */}
       </Head>
       <CSSReset />
       <RootLayout>

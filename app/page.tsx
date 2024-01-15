@@ -8,7 +8,6 @@ import SkillsPage from "./technologies/page";
 import './globals.css'; 
 
 
-//Handles smooth scrolling , Figure out how to slow down the transition. 
 const scrolltosection = (sectionId: string) => {
   const section = document.getElementById(sectionId);
   if (section) {
