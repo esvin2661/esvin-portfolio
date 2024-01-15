@@ -5,8 +5,9 @@
 
 
 :root{
-background-color:edf6f9;
-}
+    background-color:edf6f9;
+    }
+    
 .smooth-scrolling {
     scroll-behavior: smooth;
     transition-duration: 2ms;

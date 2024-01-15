@@ -1,5 +1,3 @@
-"use client";
-import React from "react";
 import {
   Flex,
   Stack,
@@ -8,7 +6,6 @@ import {
   useBreakpointValue,
   Image,
 } from "@chakra-ui/react";
-
 
 export default function HeroSection() {
   return (
@@ -48,7 +45,7 @@ export default function HeroSection() {
             color={"black "}
             textAlign="center"
           >
-           Hi - I am Esvin Ruiz, a dedicated computer science student enrolled at
+            I am Esvin Ruiz, a dedicated computer science student enrolled at
             Wilmington University. My fervor lies in cultivating opportunities
             for underrepresented minorities and transforming innovative concepts
             into tangible reality.

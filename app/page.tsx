@@ -19,7 +19,7 @@ const scrolltosection = (sectionId: string) => {
 const Home = () => {
   return (
     <div className="smooth-scrolling">
-      <HeroSection />
+      <HeroSection/>
       <GitHubContributions />
       <SkillsPage />
       <div className="projects" id="projects">

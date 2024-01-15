@@ -17,7 +17,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <ChakraProvider>
       <Head>
-        <title>Your Page Title</title>
+        <title>Esvin RUiz</title>
         {/* Add other head elements here */}
       </Head>
       <CSSReset />
