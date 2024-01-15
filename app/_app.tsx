@@ -17,7 +17,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <ChakraProvider>
       <Head>
-        <title>Esvin RUiz</title>
+        <title>Esvin Ruiz</title>
       </Head>
       <CSSReset />
       <RootLayout>
