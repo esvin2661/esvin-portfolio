@@ -18,14 +18,39 @@ interface Photo {
   text: React.ReactNode;
 }
 
-const PhotoData: Photo[] = [
+const PhotoData = [
   {
     imageUrl: "/assets/local-photos/castle.png",
     heading: "The St. Louis Cathedral",
     text: "New Orleans (2022)",
   },
-  // Add more Photo objects as needed
+  {
+    imageUrl: "/assets/local-photos/arc.png",
+    heading: "Santa Catalina Arch ",
+    text: "Antigua, Guatemala (2023)",
+  },
+  {
+    imageUrl: "/assets/local-photos/boston.png",
+    heading: "Boston",
+    text: "Massachusetts (2023)",
+  },
+  {
+    imageUrl: "/assets/local-photos/man.png",
+    heading: "Serene",
+    text: "Guatemala City (2023)",
+  },
+  {
+    imageUrl: "/assets/local-photos/lights.png",
+    heading: "Butterfree",
+    text: "Massachusetts (2022)",
+  },
+  {
+    imageUrl: "/assets/local-photos/street.png",
+    heading: "Vampire Diaries",
+    text: "New Orleans (2022)",
+  },
 ];
+
 
 export default function Photos() {
   return (

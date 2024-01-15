@@ -20,37 +20,37 @@ const ProjectData: {
   githubLink: string;
 }[] = [
   {
-    imageUrl: "/assets/projects-img/find.png",
+    imageUrl: "/assets/project-img/Find.png",
     heading: "Opportunitie-Finder",
     text: "A Python script designed to explore and identify summer internships available.",
     githubLink: "https://github.com/esvin2661/2024-undergraduate-opportunities",
   },
   {
-    imageUrl: "/assets/Projects-img/QR_code_.png",
+    imageUrl: "/assets/project-img/QR_code_.png",
     heading: "QR-Code-Encoder",
     text: "Effortlessly generate QR codes using Python encoding.",
     githubLink: "https://github.com/esvin2661/QR-Code-Encoder-",
   },
   {
-    imageUrl: "/assets/Projects-img/Books.png",
+    imageUrl: "/assets/project-img/Books.png",
     heading: "Book-Rating App",
     text: "Interactive React app for rating your favorite books.",
     githubLink: "https://github.com/esvin2661/Book-Rating",
   },
   {
-    imageUrl: "/assets/Projects-img/JSON.png/",
+    imageUrl: "/assets/project-img/JSON.png/",
     heading: "JSON-to-CSV Converter",
     text: "Python script designed to seamlessly transform JSON files into CSV format.",
     githubLink: "https://github.com/esvin2661/Convert_JSON_to_CSV",
   },
   {
-    imageUrl: "/assets/Projects-img/Watch.png",
+    imageUrl: "/assets/project-img/Watch.png",
     heading: "Stopwatch",
     text: "Interactive digital stopwatch crafted with HTML, CSS, and JavaScript",
     githubLink: "https://github.com/esvin2661/StopWatch",
   },
   {
-    imageUrl: "/assets/Projects-img/Chess.png",
+    imageUrl: "/assets/project-img/Chess.png",
     heading: "Hikaru-Chess-Analysis",
     text: "Analysis of GM Hikaru Nakamura aimed at understanding chess patterns.",
     githubLink: "https://github.com/esvin2661/Hikaru-Chess-Games-Analysis",
