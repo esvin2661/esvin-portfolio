@@ -7,22 +7,19 @@ import {
   HStack,
   IconButton,
   useDisclosure,
-  useColorModeValue,
   Stack,
   VisuallyHidden,
   useColorMode,
-  Container,
-  Text,
 } from "@chakra-ui/react";
-import { HamburgerIcon, CloseIcon, MoonIcon, SunIcon } from "@chakra-ui/icons";
+import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
 import { ReactNode } from "react";
 import { FaGithub, FaYoutube, FaLinkedin } from "react-icons/fa";
+
 interface NavLinkProps {
   children: React.ReactNode;
   href: string;
   isExternal?: boolean;
 }
-import Image from "next/image";
 
 const Links = [
   { label: "Home", href: "/" },
@@ -35,7 +32,6 @@ const Links = [
   },
 ];
 
-
 const SocialButton = ({
   children,
   label,
@@ -47,7 +43,7 @@ const SocialButton = ({
 }) => {
   return (
     <chakra.button
-      bg={useColorModeValue("blackAlpha.100", "whiteAlpha.100")}
+      bg="blackAlpha.100"
       rounded={"full"}
       w={8}
       h={8}
@@ -59,7 +55,7 @@ const SocialButton = ({
       justifyContent={"center"}
       transition={"background 0.3s ease"}
       _hover={{
-        bg: useColorModeValue("blackAlpha.200", "whiteAlpha.200"),
+        bg: "blackAlpha.200",
       }}
     >
       <VisuallyHidden>{label}</VisuallyHidden>
@@ -83,7 +79,7 @@ const NavLink = (props: NavLinkProps) => {
       rounded={"md"}
       _hover={{
         textDecoration: "none",
-        bg: useColorModeValue("gray.200", "gray.700"),
+        bg: "gray.200",
       }}
       href={href}
     >
@@ -93,23 +89,23 @@ const NavLink = (props: NavLinkProps) => {
 
   return linkComponent;
 };
-//
+
 export default function Simple() {
   const { isOpen, onOpen, onClose } = useDisclosure();
 
   return (
     <>
       <Box className="Navbar-container">
-      <Flex
+        <Flex
           h={20}
-          alignItems={"center"}
-          justifyContent={"space-between"}
-          position="fixed"  
-          width="100%"      
-          top={0}            
-          bg="#83b7ec"         
-          zIndex={999}       
-          boxShadow="sm"    
+          alignItems="center"
+          justifyContent="space-between"
+          position="fixed"
+          width="100%"
+          top={0}
+          bg="#83b7ec"
+          zIndex={999}
+          boxShadow="sm"
         >
           <IconButton
             size={"md"}
@@ -119,107 +115,75 @@ export default function Simple() {
             onClick={isOpen ? onClose : onOpen}
           />
 
-          <HStack spacing={8} alignItems={"center"}>
-              width={70}
-              height={50}
-              layout="fixed"
-          </HStack>
-          <Flex alignItems={"center"} justifyContent={"flex-end"}>
-            <HStack
-              as={"nav"}
-              spacing={4}
-              display={{ base: "none", md: "flex" }}
-            >
-              {Links.map((link) => (
-                <NavLink
-                  key={link.href}
-                  href={link.href}
-                  isExternal={link.isExternal}
-                >
-                  {link.label}
-                </NavLink>
-              ))}
-            </HStack>
-          </Flex>
 
+          <Box borderStyle="solid" borderColor="gray.200" ml="auto">
           <Box
-            borderStyle={"solid"}
-            borderColor={useColorModeValue("gray.200", "gray.700")}
-          >
-            <Container
               as={Stack}
-              maxW={"6xl"}
+              maxW="6xl"
               py={4}
               direction={{ base: "column", md: "row" }}
               spacing={4}
               justify={{ base: "center", md: "space-between" }}
               align={{ base: "center", md: "center" }}
             >
-              <Stack direction={"row"} spacing={6}>
-                <SocialButton
-                  label={"LinkedIn"}
-                  href={"https://www.linkedin.com/in/esv261/"}
-                >
+
+              <HStack spacing={15}>
+                {Links.map((link) => (
+                  <NavLink key={link.href} href={link.href} isExternal={link.isExternal}>
+                    {link.label}
+                  </NavLink>
+                ))}
+              </HStack>
+
+              <HStack spacing={6}>
+                <SocialButton label={"LinkedIn"} href={"https://www.linkedin.com/in/esv261/"}>
                   <FaLinkedin />
                 </SocialButton>
                 <SocialButton
                   label={"YouTube"}
-                  href={
-                    "https://www.youtube.com/channel/UCYyM0LuNo7ulbP7e6NcOxVw"
-                  }
+                  href={"https://www.youtube.com/channel/UCYyM0LuNo7ulbP7e6NcOxVw"}
                 >
                   <FaYoutube />
                 </SocialButton>
-                <SocialButton
-                  label={"GitHub"}
-                  href={"https://github.com/esvin2661"}
-                >
+                <SocialButton label={"GitHub"} href={"https://github.com/esvin2661"}>
                   <FaGithub />
                 </SocialButton>
-                <SocialButton
-    label="Vercel"
-    href="https://vercel.com/"
-  >
-
-    <svg
-  className="with-icon_icon__MHUeb"
-  data-testid="geist-icon"
-  fill="currentColor" 
-  height="24"
-  shapeRendering="geometricPrecision"
-  stroke="currentColor"
-  strokeLinecap="round"
-  strokeLinejoin="round"
-  strokeWidth="1.5"
-  viewBox="0 0 24 24"
-  width="24"
-  style={{ color: 'var(--geist-foreground)', width: '24px', height: '24px' }}
->
-  <path
-    fillRule="evenodd"
-    clipRule="evenodd"
-    d="M12 2L2 19.7778H22L12 2Z"
-    fill="currentColor" 
-    stroke="currentColor"
-    strokeWidth="1.5"
-  />
-</svg>
-    </SocialButton>
-              </Stack>
-            </Container>
+                <SocialButton label="Vercel" href="https://vercel.com/">
+                  <svg
+                    className="with-icon_icon__MHUeb"
+                    data-testid="geist-icon"
+                    fill="currentColor"
+                    height="24"
+                    shapeRendering="geometricPrecision"
+                    stroke="currentColor"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="1.5"
+                    viewBox="0 0 24 24"
+                    width="24"
+                    style={{ color: 'var(--geist-foreground)', width: '24px', height: '24px' }}
+                  >
+                    <path
+                      fillRule="evenodd"
+                      clipRule="evenodd"
+                      d="M12 2L2 19.7778H22L12 2Z"
+                      fill="currentColor"
+                      stroke="currentColor"
+                      strokeWidth="1.5"
+                    />
+                  </svg>
+                </SocialButton>
+              </HStack>
+          </Box>
           </Box>
         </Flex>
 
         <Box>
           {isOpen ? (
             <Box pb={4} display={{ md: "none" }}>
-              <Stack as={"nav"} spacing={4}>
+              <Stack as="nav" spacing={4}>
                 {Links.map((link) => (
-                  <NavLink
-                    key={link.href}
-                    href={link.href}
-                    isExternal={link.isExternal}
-                  >
+                  <NavLink key={link.href} href={link.href} isExternal={link.isExternal}>
                     {link.label}
                   </NavLink>
                 ))}
