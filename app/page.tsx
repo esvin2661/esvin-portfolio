@@ -9,15 +9,18 @@ import './globals.css';
 
 
 const scrolltosection = (sectionId: string) => {
-  const section = document.getElementById(sectionId);
-  if (section) {
-    section.scrollIntoView({ behavior: "smooth" });
+  if (typeof window !== 'undefined') {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
   }
 };
 
 const Home = () => {
   return (
     <div className="smooth-scrolling">
+      {/* Include other components as needed */}
       <HeroSection/>
       <GitHubContributions />
       <SkillsPage />
@@ -31,5 +34,4 @@ const Home = () => {
   );
 };
 
-
-export default Home; 
+export default Home;
