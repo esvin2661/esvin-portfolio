@@ -4,7 +4,6 @@ import { skills } from "../constants/index"
 
 
 
-
 const SkillsPage = () => {
   return (
     <div>
@@ -20,10 +19,10 @@ const SkillsPage = () => {
       </Text>
       <Flex
         mb={10}
-        direction={["column", "row"]} // Stack items vertically on small screens, horizontally on larger screens
+        direction={["column", "row"]} 
         alignItems="center"
         justifyContent="center"
-        flexWrap="wrap" // Allow items to wrap onto the next line on small screens
+        flexWrap="wrap" 
       >
         {skills.map((skill, index) => (
           <Box
@@ -34,7 +33,6 @@ const SkillsPage = () => {
             mb={8}
             mr={4}
             p={2}
-            //icon width and height
             width={140}
             height={140}
             border="3px solid black"

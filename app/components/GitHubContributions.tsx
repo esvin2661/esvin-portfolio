@@ -23,7 +23,7 @@ const GitHubContributions = () => {
               Github Contribution&apos;s
             </Text>
             <chakra.img
-              src="http://ghchart.rshah.org/esvin2661"
+              src="https://ghchart.rshah.org/esvin2661"
               alt="Esvin Ruiz 2023 Github chart"
               style={{ width: "800px", height: "auto" }}
             />

@@ -43,8 +43,7 @@ const SocialButton = ({
     </chakra.button>
   )
 }
-//code for grey box
-/* <Box bg={useColorModeValue("gray.100", "gray.900")} px={4}>*/
+
 
 export default function Footer() {
   return (
@@ -61,8 +60,6 @@ export default function Footer() {
           <Link href={"/"}>Home</Link>
           <Link href={"#projects"}>Projects</Link>
           <Link href={"#photos"}>Photos</Link>
-          {/* ADD Portfolio section later*/}
-          {/* <Link href={"/portfolio"}>Portfolio</Link> */}
           <Link href={"/resume"}>Resume</Link>
         </Stack>
       </Container>

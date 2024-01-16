@@ -10,6 +10,7 @@ import {
   useColorModeValue,
   Stack,
   VisuallyHidden,
+  useColorMode,
   Container,
   Text,
 } from "@chakra-ui/react";
@@ -82,6 +83,7 @@ const NavLink = (props: NavLinkProps) => {
       rounded={"md"}
       _hover={{
         textDecoration: "none",
+        bg: useColorModeValue("gray.200", "gray.700"),
       }}
       href={href}
     >
@@ -95,7 +97,6 @@ const NavLink = (props: NavLinkProps) => {
 export default function Simple() {
   const { isOpen, onOpen, onClose } = useDisclosure();
 
-
   return (
     <>
       <Box className="Navbar-container">
@@ -103,12 +104,12 @@ export default function Simple() {
           h={20}
           alignItems={"center"}
           justifyContent={"space-between"}
-          position="fixed"  // Set the position to fixed
-          width="100%"      // Set the width to 100% to cover the entire screen
-          top={0}            // Position it at the top
-          bg="#83b7ec"         // Adjust background color as needed
-          zIndex={999}       // Set a high z-index to ensure it's above other elements
-          boxShadow="sm"     // Optional: Add a shadow for better visibility
+          position="fixed"  
+          width="100%"      
+          top={0}            
+          bg="#83b7ec"         
+          zIndex={999}       
+          boxShadow="sm"    
         >
           <IconButton
             size={"md"}
@@ -117,16 +118,7 @@ export default function Simple() {
             display={{ md: "none" }}
             onClick={isOpen ? onClose : onOpen}
           />
-          {/* Handles Logo Customazation */}
-          <HStack spacing={8} alignItems={"center"}>
-            <Image
-              alt={"Login Image"}
-              src={"/logo_transparent.png"}
-              width={70}
-              height={50}
-              layout="fixed"
-            />
-          </HStack>
+
           <Flex alignItems={"center"} justifyContent={"flex-end"}>
             <HStack
               as={"nav"}
@@ -183,11 +175,11 @@ export default function Simple() {
     label="Vercel"
     href="https://vercel.com/"
   >
-    {/* Your Vercel icon here */}
+
     <svg
   className="with-icon_icon__MHUeb"
   data-testid="geist-icon"
-  fill="currentColor" // Change 'none' to 'currentColor' to fill the icon with the current text color
+  fill="currentColor" 
   height="24"
   shapeRendering="geometricPrecision"
   stroke="currentColor"
@@ -202,7 +194,7 @@ export default function Simple() {
     fillRule="evenodd"
     clipRule="evenodd"
     d="M12 2L2 19.7778H22L12 2Z"
-    fill="currentColor" // Add 'fill' attribute to set the fill color
+    fill="currentColor" 
     stroke="currentColor"
     strokeWidth="1.5"
   />
