@@ -119,6 +119,11 @@ export default function Simple() {
             onClick={isOpen ? onClose : onOpen}
           />
 
+          <HStack spacing={8} alignItems={"center"}>
+              width={70}
+              height={50}
+              layout="fixed"
+          </HStack>
           <Flex alignItems={"center"} justifyContent={"flex-end"}>
             <HStack
               as={"nav"}
