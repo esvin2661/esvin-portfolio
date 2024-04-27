@@ -67,7 +67,7 @@ export default function HeroSection() {
           height="auto"
           transition="transform 1.6s"
           _hover={{
-            transform: "scale(1.25) rotate(360deg)",
+            transform: "scale(0.5) rotate(360deg)",
           }}
         />
       </Flex>

@@ -9,13 +9,12 @@ import {
   useDisclosure,
   Stack,
   VisuallyHidden,
-  useColorMode,
 } from "@chakra-ui/react";
 import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
 import { ReactNode } from "react";
 import { FaGithub, FaYoutube, FaLinkedin } from "react-icons/fa";
 
-interface NavLinkProps {
+interface NavLinkProps { 
   children: React.ReactNode;
   href: string;
   isExternal?: boolean;
