@@ -51,12 +51,16 @@ export default function Footer() {
       <Container
         as={Stack}
         maxW={"6xl"}
-        py={4}
-        spacing={4}
+        py={{ base: 3, md: 4 }}
+        spacing={{ base: 3, md: 4 }}
         justify={"center"}
         align={"center"}
       >
-        <Stack direction={"row"} spacing={6}>
+        <Stack 
+          direction={{ base: "column", sm: "row" }} 
+          spacing={{ base: 3, md: 6 }}
+          align="center"
+        >
           <Link href={"/"}>Home</Link>
           <Link href={"#projects"}>Projects</Link>
           <Link href={"#photos"}>Photos</Link>
@@ -72,14 +76,14 @@ export default function Footer() {
         <Container
           as={Stack}
           maxW={"6xl"}
-          py={4}
+          py={{ base: 3, md: 4 }}
           direction={{ base: "column", md: "row" }}
-          spacing={4}
+          spacing={{ base: 3, md: 4 }}
           justify={{ base: "center", md: "space-between" }}
           align={{ base: "center", md: "center" }}
         >
-          <Text>&copy; 2023 Esvin Ruiz. All rights reserved.</Text>
-          <Stack direction={"row"} spacing={6}>
+          <Text fontSize={{ base: "sm", md: "md" }}>&copy; 2023 Esvin Ruiz. All rights reserved.</Text>
+          <Stack direction={"row"} spacing={{ base: 4, md: 6 }}>
             <SocialButton
               label={"LinkedIn"}
               href={"https://www.linkedin.com/in/esv261/"}

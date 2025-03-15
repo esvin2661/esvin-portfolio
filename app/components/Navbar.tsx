@@ -96,7 +96,7 @@ export default function Simple() {
     <>
       <Box className="Navbar-container">
         <Flex
-          h={20}
+          h={{ base: 16, md: 20 }}
           alignItems="center"
           justifyContent="space-between"
           position="fixed"
@@ -105,6 +105,7 @@ export default function Simple() {
           bg="#83b7ec"
           zIndex={999}
           boxShadow="sm"
+          px={{ base: 4, md: 6 }}
         >
           <IconButton
             size={"md"}
@@ -112,21 +113,21 @@ export default function Simple() {
             aria-label={"Open Menu"}
             display={{ md: "none" }}
             onClick={isOpen ? onClose : onOpen}
+            variant="ghost"
+            _hover={{ bg: "blue.300" }}
           />
 
-
           <Box borderStyle="solid" borderColor="gray.200" ml="auto">
-          <Box
+            <Box
               as={Stack}
               maxW="6xl"
-              py={4}
+              py={{ base: 2, md: 4 }}
               direction={{ base: "column", md: "row" }}
               spacing={4}
               justify={{ base: "center", md: "space-between" }}
               align={{ base: "center", md: "center" }}
             >
-
-              <HStack spacing={15}>
+              <HStack spacing={{ base: 4, md: 15 }} display={{ base: "none", md: "flex" }}>
                 {Links.map((link) => (
                   <NavLink key={link.href} href={link.href} isExternal={link.isExternal}>
                     {link.label}
@@ -134,7 +135,7 @@ export default function Simple() {
                 ))}
               </HStack>
 
-              <HStack spacing={6}>
+              <HStack spacing={{ base: 4, md: 6 }}>
                 <SocialButton label={"LinkedIn"} href={"https://www.linkedin.com/in/esv261/"}>
                   <FaLinkedin />
                 </SocialButton>
@@ -173,14 +174,30 @@ export default function Simple() {
                   </svg>
                 </SocialButton>
               </HStack>
-          </Box>
+            </Box>
           </Box>
         </Flex>
 
         <Box>
           {isOpen ? (
-            <Box pb={4} display={{ md: "none" }}>
-              <Stack as="nav" spacing={4}>
+            <Box 
+              pb={4} 
+              display={{ md: "none" }}
+              position="fixed"
+              top="16"
+              left={0}
+              right={0}
+              bg="#83b7ec"
+              zIndex={998}
+              boxShadow="sm"
+            >
+              <Stack 
+                as="nav" 
+                spacing={4} 
+                px={4}
+                align="center"
+                pt={2}
+              >
                 {Links.map((link) => (
                   <NavLink key={link.href} href={link.href} isExternal={link.isExternal}>
                     {link.label}
