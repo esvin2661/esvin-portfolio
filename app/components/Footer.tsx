@@ -60,7 +60,7 @@ export default function Footer() {
           <Link href={"/"}>Home</Link>
           <Link href={"#projects"}>Projects</Link>
           <Link href={"#photos"}>Photos</Link>
-          <Link href={"/resume"}>Resume</Link>
+          <Link href={"https://esvin-ruiz-resume.tiiny.site"} isExternal>Resume</Link>
         </Stack>
       </Container>
 

@@ -46,7 +46,7 @@ export default function HeroSection() {
             textAlign="center"
           >
             I am Esvin Ruiz, a dedicated computer science student  at
-            Wilmington University. My fervor lies in cultivating opportunities
+            UMass Boston. My fervor lies in cultivating opportunities
             for underrepresented individulas and transforming innovative concepts
             into tangible reality.
           </Text>

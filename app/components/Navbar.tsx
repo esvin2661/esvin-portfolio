@@ -26,7 +26,7 @@ const Links = [
   { label: 'Photos', href: '#photos' },
   {
     label: "Resume",
-    href: "https://blush-romola-69.tiiny.site/",
+    href: "https://esvin-ruiz-resume.tiiny.site",
     isExternal: true,
   },
 ];
